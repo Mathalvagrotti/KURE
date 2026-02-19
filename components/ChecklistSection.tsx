@@ -18,11 +18,11 @@ const ChecklistSection: React.FC<Props> = ({ section, data, onUpdateItem }) => {
   const isComplete = totalItems === completedItems;
 
   return (
-    <div className="mb-6 border border-gray-200 rounded-xl overflow-hidden shadow-sm bg-white">
+    <div className="mb-6 border border-indigo-100 rounded-xl overflow-hidden shadow-sm bg-white">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`w-full flex items-center justify-between p-4 transition-colors ${
-          isComplete ? 'bg-green-50 hover:bg-green-100' : 'bg-slate-800 hover:bg-slate-700'
+          isComplete ? 'bg-green-50 hover:bg-green-100' : 'bg-indigo-900 hover:bg-indigo-800'
         }`}
       >
         <div className="flex items-center gap-3">
@@ -32,7 +32,7 @@ const ChecklistSection: React.FC<Props> = ({ section, data, onUpdateItem }) => {
           </h2>
         </div>
         <div className="flex items-center gap-4">
-          <span className={`text-sm ${isComplete ? 'text-green-700' : 'text-slate-300'}`}>
+          <span className={`text-sm ${isComplete ? 'text-green-700' : 'text-indigo-200'}`}>
             {completedItems}/{totalItems}
           </span>
           {isOpen ? (

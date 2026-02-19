@@ -1,5 +1,5 @@
 {
-  "name": "FlexiCheck - Vistoria Técnica",
+  "name": "KURE Check - Vistoria Técnica",
   "description": "Aplicativo de checklist digital para unidades móveis (ônibus, vans, containers) com registro fotográfico de não conformidades.",
   "requestFramePermissions": [
     "camera"

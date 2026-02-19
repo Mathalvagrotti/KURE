@@ -55,24 +55,24 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen pb-20">
+    <div className="min-h-screen pb-20 bg-slate-50">
       {/* Header */}
-      <header className="bg-slate-900 text-white shadow-lg sticky top-0 z-50">
+      <header className="bg-indigo-900 text-white shadow-lg sticky top-0 z-50">
         <div className="max-w-3xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="bg-blue-600 p-2 rounded-lg">
+            <div className="bg-purple-500 p-2 rounded-lg shadow-md">
               <Truck size={24} className="text-white" />
             </div>
             <div>
-              <h1 className="font-bold text-xl leading-none">FlexiCheck</h1>
-              <p className="text-xs text-slate-400">Vistoria Digital</p>
+              <h1 className="font-bold text-xl leading-none tracking-tight">KURE Check</h1>
+              <p className="text-xs text-indigo-200">Vistoria Digital</p>
             </div>
           </div>
           <div className="flex flex-col items-end">
-            <div className="text-sm font-bold text-blue-400">{calculateProgress()}% Completo</div>
-            <div className="w-24 h-1.5 bg-slate-700 rounded-full mt-1">
+            <div className="text-sm font-bold text-purple-300">{calculateProgress()}% Completo</div>
+            <div className="w-24 h-1.5 bg-indigo-800 rounded-full mt-1">
               <div 
-                className="h-full bg-blue-500 rounded-full transition-all duration-500"
+                className="h-full bg-purple-400 rounded-full transition-all duration-500 shadow-[0_0_10px_rgba(192,132,252,0.5)]"
                 style={{ width: `${calculateProgress()}%` }}
               ></div>
             </div>
@@ -83,17 +83,17 @@ function App() {
       <main className="max-w-3xl mx-auto px-4 py-6 space-y-6">
         
         {/* Info Card */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-          <h2 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-            <ClipboardList className="text-blue-600" size={20} />
+        <div className="bg-white rounded-xl shadow-sm border border-indigo-100 p-5">
+          <h2 className="text-lg font-bold text-indigo-900 mb-4 flex items-center gap-2">
+            <ClipboardList className="text-purple-600" size={20} />
             Dados da Vistoria
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs font-bold text-gray-500 uppercase mb-1">Tipo de Unidade</label>
+              <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Tipo de Unidade</label>
               <select
-                className="w-full border border-gray-300 rounded p-2 bg-gray-50"
+                className="w-full border border-gray-300 rounded p-2 bg-gray-50 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all"
                 value={data.header.unitType}
                 onChange={(e) => handleHeaderChange('unitType', e.target.value)}
               >
@@ -101,39 +101,39 @@ function App() {
               </select>
             </div>
             <div>
-              <label className="block text-xs font-bold text-gray-500 uppercase mb-1">Placa / ID</label>
+              <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Placa / ID</label>
               <input
                 type="text"
-                className="w-full border border-gray-300 rounded p-2"
+                className="w-full border border-gray-300 rounded p-2 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all"
                 placeholder="ABC-1234"
                 value={data.header.plateOrId}
                 onChange={(e) => handleHeaderChange('plateOrId', e.target.value)}
               />
             </div>
             <div>
-              <label className="block text-xs font-bold text-gray-500 uppercase mb-1">Cliente</label>
+              <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Cliente</label>
               <input
                 type="text"
-                className="w-full border border-gray-300 rounded p-2"
+                className="w-full border border-gray-300 rounded p-2 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all"
                 placeholder="Nome do Cliente"
                 value={data.header.clientName}
                 onChange={(e) => handleHeaderChange('clientName', e.target.value)}
               />
             </div>
             <div>
-              <label className="block text-xs font-bold text-gray-500 uppercase mb-1">Data</label>
+              <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Data</label>
               <input
                 type="date"
-                className="w-full border border-gray-300 rounded p-2"
+                className="w-full border border-gray-300 rounded p-2 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all"
                 value={data.header.date}
                 onChange={(e) => handleHeaderChange('date', e.target.value)}
               />
             </div>
             <div className="md:col-span-2">
-              <label className="block text-xs font-bold text-gray-500 uppercase mb-1">Responsável pela Vistoria</label>
+              <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Responsável pela Vistoria</label>
               <input
                 type="text"
-                className="w-full border border-gray-300 rounded p-2"
+                className="w-full border border-gray-300 rounded p-2 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all"
                 placeholder="Seu Nome"
                 value={data.header.inspectorName}
                 onChange={(e) => handleHeaderChange('inspectorName', e.target.value)}
@@ -160,7 +160,7 @@ function App() {
       <div className="fixed bottom-6 right-6 z-40">
         <button
           onClick={() => setView('report')}
-          className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-6 py-4 rounded-full shadow-xl font-bold transition-transform hover:scale-105"
+          className="flex items-center gap-2 bg-indigo-800 hover:bg-indigo-700 text-white px-6 py-4 rounded-full shadow-xl shadow-indigo-900/30 font-bold transition-all hover:scale-105"
         >
           <FileText size={20} />
           Gerar Relatório
